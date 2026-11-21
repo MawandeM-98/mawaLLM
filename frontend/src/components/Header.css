@@ -1,0 +1,174 @@
+
+/* =========================================
+   WORKSPACE HEADER
+========================================= */
+
+.workspace-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 8px 0 28px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* =========================================
+   HEADER INFORMATION
+========================================= */
+
+.header-information {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.header-information h1 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.header-information p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Local AI indicator */
+
+.local-model-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 12px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(117, 155, 131, 0.4);
+}
+
+/* =========================================
+   THEME TOGGLE
+========================================= */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 13px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+
+  background: var(--glass-bg);
+  color: var(--text-primary);
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+.theme-icon {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.theme-label {
+  white-space: nowrap;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE HEADER
+========================================= */
+
+@media (max-width: 768px) {
+  .workspace-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .header-information h1 {
+    font-size: 21px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .workspace-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions {
+    justify-content: space-between;
+  }
+}

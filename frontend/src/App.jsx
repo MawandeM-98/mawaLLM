@@ -2,6 +2,7 @@
 import { useState } from 'react'
 
 import Sidebar from './components/Sidebar'
+import Header from './components/Header'
 
 import './App.css'
 
@@ -52,18 +53,12 @@ function App() {
   return (
     <div className="app-layout">
 
-      {/* Sidebar component */}
       <Sidebar />
 
-      {/* Main chatbot workspace */}
       <main className="chat-workspace">
 
-        <header className="workspace-header">
-          <h1>Welcome to mawaLLM</h1>
-          <p>Your locally powered AI assistant.</p>
-        </header>
+        <Header />
 
-        {/* Existing chatbot */}
         <section className="chat-container">
 
           <div className="response">
